@@ -1,0 +1,59 @@
+
+#dateLabel
+{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+input[type="text"]
+{
+    width:220px;
+    height:45px;
+    margin-top:5px;
+    border-radius:5px;
+    font-size: 1.3rem;
+
+}
+
+.main-container
+{
+    border:2px solid red;
+    margin-left:auto;
+    margin-right: auto;
+    width:50%;
+}
+
+.select-date
+{
+   padding:20px;
+   border:1px solid blue;
+}
+.adjust-icon
+{
+    width:50px;
+}
+
+.calendarGridContainer
+{
+   margin-top:10px;
+    background:green;
+    height:500px;
+   margin-left:20px;
+   
+}
+.calendarIndicator
+{
+    background:red;
+    height:100px;
+}
+.weekdays-container
+{
+    background:yellow;
+    height:100px;
+}
+
+.calendarDays-container
+{
+    background:purple;
+    height:300px;
+}
