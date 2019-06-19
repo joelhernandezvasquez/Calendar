@@ -3,6 +3,7 @@ time
 {
     font-size: 2rem;
     font-weight:600;
+    color:#637b93;
 }
 button
 {
@@ -47,16 +48,18 @@ input[type="text"]
 
 .main-container
 {
-    border:2px solid red;
+    /* border:2px solid red; */
     margin-left:auto;
     margin-right: auto;
     width:35%;
+    background:#d9e3ec;
+    height:600px;
 }
 
 .select-date
 {
    padding:20px;
-   border:1px solid blue;
+   /* border:1px solid blue; */
 }
 .adjust-icon
 {
@@ -66,17 +69,19 @@ input[type="text"]
 .calendarGridContainer
 {
    margin-top:10px;
-    background:green;
-    height:500px;
+    /* background:green; */
+    
     width:95%;
     margin-left:20px;
+    border-radius:10px;
+    background:white;
   
    
    
 }
 .calendarIndicator
 {
-    border:2px solid red;
+    /* border:2px solid red; */
     height:70px;
     display:flex;
     justify-content: center;
@@ -87,7 +92,7 @@ input[type="text"]
 }
 .weekdays-container
 {
-    border:2px solid yellow;
+    /* border:2px solid yellow; */
     height:50px;
     display: flex;
     justify-content: space-around;
@@ -96,9 +101,15 @@ input[type="text"]
 
 .calendarDays-container
 {
-    margin-left:78px;
-    background:purple;
+    margin-left:60px;
+    /* background:purple; */
     height:300px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(60px,90px));
+    grid-template-columns: repeat(auto-fit,minmax(45px,80px));
+    padding:0px 0px 0px 13px;
+}
+.calendarDays-container button:first-child
+{
+    grid-column: 6;
+    
 }
