@@ -51,7 +51,7 @@ input[type="text"]
     /* border:2px solid red; */
     margin-left:auto;
     margin-right: auto;
-    width:35%;
+    width:40%;
     background:#d9e3ec;
     height:600px;
 }
@@ -105,8 +105,8 @@ input[type="text"]
     /* background:purple; */
     height:300px;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(45px,80px));
-    padding:0px 0px 0px 13px;
+    grid-template-columns: repeat(auto-fit,minmax(40px,70px));
+    padding:0px 0px 0px 15px;
 }
 .calendarDays-container button:first-child
 {
