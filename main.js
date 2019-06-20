@@ -6,7 +6,6 @@ const month = date.getMonth();
 const monthName = getMonth(month);
 const monthIndicator = `${monthName} ${year}`;
 
-setIndicatorMonth();
 
 
 
@@ -38,10 +37,17 @@ function getMonth(month,style="long")
     }
 }
 
-function setIndicatorMonth()
+function setIndicatorMonth(monthIndicatorDate)
 {
-  const container = document.querySelector(".calendarIndicator");
-    const m = document.querySelector("#monthText");
-  console.log(container);
-  //month.textContent = monthIndicator;
+  monthIndicatorDate.textContent = monthIndicator;
+
+  // Setting month indicator datetime attribute
+
+  const dateTimeIndicator = month + 1 < 10
+  ? `0${month + 1}`
+  : month + 1;
+  
+  const dateTimeValue = `${year} - ${dateTimeIndicator}`;
+  monthIndicatorDate.setAttribute('datetime',dateTimeValue);
+
 }
