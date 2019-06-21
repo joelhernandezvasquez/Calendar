@@ -1,10 +1,25 @@
 
-const date = new Date(2019,1);
+const date = new Date(2019,3);
 
 const year = date.getFullYear();
 const month = date.getMonth();
 const monthName = getMonth(month);
 const monthIndicator = `${monthName} ${year}`;
+
+
+
+// Getting the first day of the  Month
+
+const firstDayOfMonth = getDayOfWeek(date.getDay());
+console.log(date.getDay())
+console.log(firstDayOfMonth);
+
+
+
+// Getting the Number of days in the month
+const lastDayOfMonth = new Date(year,month + 1,0);
+const numberDaysInMonth = lastDayOfMonth.getDate();
+
 
 
 
@@ -35,6 +50,27 @@ function getMonth(month,style="long")
     {
         return monthInYear[month].shortName;
     }
+}
+
+function getDayOfWeek(day,style="long")
+{
+  const arrayDayOfWeek  = [
+      {shortName:"Sun",longName:"Sunday"},
+      {shortName:"Mon",longName:"Monday"},
+      {shortName:"Tue",longName:"Tuesday"},
+      {shortName:"Wed",longName:"Wednesday"},
+      {shortName:"Thu",longName:"Thursday"},
+      {shortName:"Fri",longName:"Friday"},
+      {shortName:"Sat",longName:"Saturday"}
+  ];
+  if(style==="long")
+  {
+      return arrayDayOfWeek[day].longName;
+  }
+  else
+  {
+   return arrayDayOfWeek[day].shortName;
+  }
 }
 
 function setIndicatorMonth(monthIndicatorDate)
