@@ -1,5 +1,5 @@
 
-const date = new Date(2019,3);
+const date = new Date(2019,1);
 
 const year = date.getFullYear();
 const month = date.getMonth();
@@ -11,9 +11,6 @@ const monthIndicator = `${monthName} ${year}`;
 // Getting the first day of the  Month
 
 const firstDayOfMonth = getDayOfWeek(date.getDay());
-console.log(date.getDay())
-console.log(firstDayOfMonth);
-
 
 
 // Getting the Number of days in the month
@@ -21,7 +18,26 @@ const lastDayOfMonth = new Date(year,month + 1,0);
 const numberDaysInMonth = lastDayOfMonth.getDate();
 
 
+// assigning the first day of the month in the grid calendar
+function positonFirstDay(button)
+{
+   button.style.gridColumn = date.getDay() + 1;
+}
 
+function buildDateGridCalendar(gridCalendar)
+{
+   let buttons ="";
+    for(let day=1; day <=numberDaysInMonth; day++)
+   {
+        buttons += `<button> 
+                    <time datetime=${setDateTimeAttribute(day)}>${day}</time> 
+                    </button>`;
+       
+   }
+   
+   gridCalendar.innerHTML = buttons;
+   console.log(gridCalendar);
+}
 
 
 function getMonth(month,style="long")
@@ -86,4 +102,14 @@ function setIndicatorMonth(monthIndicatorDate)
   const dateTimeValue = `${year} - ${dateTimeIndicator}`;
   monthIndicatorDate.setAttribute('datetime',dateTimeValue);
 
+}
+
+function setDateTimeAttribute(day)
+{
+    const dateTimeIndicator = month + 1 < 10
+  ? `0${month + 1}`
+  : month + 1;
+  
+  const dateTimeValue = `${year}-${dateTimeIndicator}-${day}`; 
+  return dateTimeValue;
 }
